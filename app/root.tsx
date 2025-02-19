@@ -7,6 +7,8 @@ import {
 } from "@remix-run/react";
 import type { LinksFunction } from "@remix-run/node";
 
+import MainHeader from "~/components/navigation/MainHeader";
+
 import "./tailwind.css";
 import sharedStyles from "~/styles/shared.css";
 
@@ -37,6 +39,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <Links />
       </head>
       <body>
+        <MainHeader />
         {children}
         <ScrollRestoration />
         <Scripts />
